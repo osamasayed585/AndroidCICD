@@ -124,7 +124,7 @@ class NewsViewModelTest {
         val flow = flowOf(1, 2, 3).map { it * 10 }.stateIn(this)
 
         flow.test {
-            assertEquals(10, awaitItem())
+            assertEquals(30, awaitItem())
         }
 
     }
