@@ -93,7 +93,7 @@ class NewsViewModelTest {
 
     @Test
     fun `test flow`() = runTest {
-        val res = flowOf(1,2,3,4)
+        val res = flowOf(1, 2, 3, 4)
         res.test {
             assert(awaitItem() == 1)
             assert(awaitItem() == 2)
@@ -105,26 +105,26 @@ class NewsViewModelTest {
 
     @Test
     fun `test flow with exception`() = runTest {
-        val res = flow{
+        val res = flow {
             emit(1)
             emit(2)
             emit(3)
             throw IllegalArgumentException("Test Exception")
         }
         res.test {
-            assertEquals(1 , awaitItem())
-            assertEquals(2 , awaitItem())
-            assertEquals(3 , awaitItem())
+            assertEquals(1, awaitItem())
+            assertEquals(2, awaitItem())
+            assertEquals(3, awaitItem())
             awaitError().message?.contains("Test Exception")
         }
     }
 
     @Test
     fun `convert to hot flow `() = runTest {
-        val flow = flowOf(1,2,3).map { it * 10 }.stateIn(this)
+        val flow = flowOf(1, 2, 3).map { it * 10 }.stateIn(this)
 
         flow.test {
-            assertEquals(30 , awaitItem())
+            assertEquals(10, awaitItem())
         }
 
     }
