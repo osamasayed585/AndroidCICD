@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TheLan</string>
+    <string name="hello_android">مرحبا ي اندرويد!</string>
+    <string name="click_me">انقر فوق لي</string>
+    <string name="hello_compose">هلا والله كمبوز</string>
+</resources>

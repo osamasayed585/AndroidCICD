@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheLan</string>
+    <string name="hello_android">Hello Android!</string>
+    <string name="click_me">Click Me</string>
+
+    <string name="hello_compose">Hello Compose</string>
+</resources>
